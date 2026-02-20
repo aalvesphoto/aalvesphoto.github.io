@@ -1,0 +1,14 @@
+---
+title: "Night City"
+description: "Long exposures and neon reflections in the urban dark."
+folder: night-city
+photos:
+  - src: img1.jpg
+    w: 1920
+    h: 1280
+    caption: "Rain-slicked avenue, 2am"
+  - src: img2.jpg
+    w: 1920
+    h: 1080
+    caption: "Underpass light trails"
+---

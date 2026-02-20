@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="gallery-page">
+  <div class="gallery-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="gallery-desc">{{ page.description }}</p>{% endif %}
+  </div>
+
+  <div class="photo-grid" id="gallery-{{ page.slug }}">
+    {% for photo in page.photos %}
+    <a href="{{ photo.src | prepend: '/assets/photos/' | prepend: page.folder | prepend: '/' | relative_url }}"
+       data-pswp-width="{{ photo.w }}"
+       data-pswp-height="{{ photo.h }}"
+       class="photo-thumb"
+       target="_blank">
+      <img src="{{ photo.src | prepend: '/assets/photos/' | prepend: page.folder | prepend: '/' | relative_url }}"
+           alt="{{ photo.caption | default: page.title }}"
+           loading="lazy">
+      {% if photo.caption %}
+      <span class="photo-caption">{{ photo.caption }}</span>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </div>
+</section>

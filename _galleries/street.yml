@@ -1,0 +1,14 @@
+---
+title: "Street"
+description: "Candid moments in the flow of the city."
+folder: street
+photos:
+  - src: img1.jpg
+    w: 1280
+    h: 1920
+    caption: "Rush hour shadows"
+  - src: img2.jpg
+    w: 1920
+    h: 1280
+    caption: "Crosswalk, dusk"
+---

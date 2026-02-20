@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Blog"
+---
+<section class="blog-index">
+  <h1 class="section-title">// Blog</h1>
+  <ul class="post-list full">
+    {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <time>{{ post.date | date: "%B %d, %Y" }}</time>
+      {% if post.excerpt %}<p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>

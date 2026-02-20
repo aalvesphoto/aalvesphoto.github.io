@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Galleries"
+---
+<section class="galleries-index">
+  <h1 class="section-title">// Galleries</h1>
+  <div class="gallery-cards">
+    {% assign galleries = site.galleries | sort: "title" %}
+    {% for gallery in galleries %}
+    <a class="gallery-card" href="{{ gallery.url | relative_url }}">
+      {% if gallery.photos[0] %}
+      <img src="{{ '/assets/photos/' | append: gallery.folder | append: '/' | append: gallery.photos[0].src | relative_url }}"
+           alt="{{ gallery.title }}"
+           loading="lazy">
+      {% endif %}
+      <div class="card-label">
+        <span>{{ gallery.title }}</span>
+        <small>{{ gallery.photos | size }} photos</small>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
